@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JT THREEJS STARTER</title>
+    <style>
+        body { margin: 0;}
+        canvas { position: fixed; top: 0; left: 0; right: 0; bottom: 0;}
+        .container { width: 640px; margin: auto; position: relative; z-index: 2; color: #ffeb3b; padding-top: 70vh;padding-bottom: 100vh; line-height: 1.8;}
+        .container h1 { font-size: 58px}
+        .container h2 {  font-size: 38px}
+        .container p { margin-bottom: 40px;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JT THREEJS STARTER</h1>
+        <h2>AWSOME</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
+        <h2>PIXEL PERFECT</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco . Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
+        <p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
+        <h2>EMOTION</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco . Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
+        <p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco . Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
+        <p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident</p>
+
+    </div>
+
+    <!--
+    <script id="fragmentShader" type="x-shader/x-fragment">
+        uniform float time;
+
+        uniform float fogDensity;
+        uniform vec3 fogColor;
+
+        uniform sampler2D texture1;
+        uniform sampler2D texture2;
+
+        varying vec2 vUv;
+
+        void main( void ) {
+
+            vec2 position = - 1.0 + 2.0 * vUv;
+
+            vec4 noise = texture2D( texture1, vUv );
+            vec2 T1 = vUv + vec2( 1.5, - 1.5 ) * time * 0.02;
+            vec2 T2 = vUv + vec2( - 1.5, 0.5 ) * time * 0.01;
+
+            T1.x += noise.x * 2.0;
+            T1.y += noise.y * 2.0;
+            T2.x -= noise.y * 0.2;
+            T2.y += noise.z * 0.2;
+
+            float p = texture2D( texture1, T1 * 2.0 ).a;
+
+            vec4 color = texture2D( texture2, T2 * 2.0 );
+            vec4 temp = color * ( vec4( p, p, p, p ) * 2.0 ) + ( color * color - 0.1 );
+
+            if( temp.r > 1.0 ) { temp.bg += clamp( temp.r - 2.0, 0.0, 100.0 ); }
+            if( temp.g > 1.0 ) { temp.rb += temp.g - 1.0; }
+            if( temp.b > 1.0 ) { temp.rg += temp.b - 1.0; }
+
+            gl_FragColor = temp;
+
+            float depth = gl_FragCoord.z / gl_FragCoord.w;
+            const float LOG2 = 1.442695;
+            float fogFactor = exp2( - fogDensity * fogDensity * depth * depth * LOG2 );
+            fogFactor = 1.0 - clamp( fogFactor, 0.0, 1.0 );
+
+            gl_FragColor = mix( gl_FragColor, vec4( fogColor, gl_FragColor.w ), fogFactor );
+
+        }
+    </script>
+
+    <script id="vertexShader" type="x-shader/x-vertex">
+        uniform vec2 uvScale;
+        varying vec2 vUv;
+
+        void main()
+        {
+
+            vUv = uvScale * uv;
+            vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+            gl_Position = projectionMatrix * mvPosition;
+
+        }
+    </script>
+    -->
+
+    <script src="js/gsap/gsap.min.js"></script>
+    <script src="js/gsap/ScrollTrigger.min.js"></script>
+    <script src="js/three/three.min.js"></script>
+    <script src="js/three/addons/loaders/GLTFLoader.js"></script>
+    <script src="js/three/addons/controls/OrbitControls.js"></script>
+    <script src="js/three/addons/postprocessing/EffectComposer.js"></script>
+    <script src="js/three/addons/postprocessing/ShaderPass.js"></script>
+    <script src="js/three/addons/postprocessing/RenderPass.js"></script>
+    <script src="js/three/addons/shaders/CopyShader.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
